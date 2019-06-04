@@ -9,7 +9,7 @@ const forecast = require("./utils/forcast")
 //     console.log('Data', data)
 // })
 
-forecast(22.03 , 74.9s , (error , data) => {
+forecast(22.03 , 74.9 , (error , data) => {
     console.log('Error', error)
     console.log('Data', data)
 })

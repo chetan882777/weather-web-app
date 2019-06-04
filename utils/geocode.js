@@ -1,11 +1,10 @@
 
 const request = require('request')
 
-const geoUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/Barwani.json?access_token=pk.eyJ1IjoiY2hldGFucGF3YXIiLCJhIjoiY2p3Z3R0MDhoMGNxdjQwbGJnajM2ZHo4byJ9.5azLiuRBvbXvy3xE0tDovw"
-
-
-
 const geoCode = function(address, callback){
+
+    const geoUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/ "+ address +".json?access_token=pk.eyJ1IjoiY2hldGFucGF3YXIiLCJhIjoiY2p3Z3R0MDhoMGNxdjQwbGJnajM2ZHo4byJ9.5azLiuRBvbXvy3xE0tDovw"
+
 
     request({ url: geoUrl, json: true }, (error, response) => {
     
