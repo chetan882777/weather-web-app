@@ -2,9 +2,10 @@ const request = require("request")
 const geoCode = require("./utils/geocode")
 const forecast = require("./utils/forcast")
 
-
-
-geoCode('Barwani', (error, data) => {
+if(process.argv.length  < 2){
+    return console.log("Name of place required!")
+}
+geoCode(process.argv[2], (error, data) => {
 
     if(error){
         return console.log(error)    
