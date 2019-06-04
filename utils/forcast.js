@@ -11,7 +11,7 @@ const forecast = function (latitude, longitude, callback) {
             callback('Unable to find coordinates. Try another search', undefined)
         } else {
             callback(undefined , {
-                data : response.body.currently
+                data : response.body.currently.summary + " through out day. It is currently " + response.body.currently.temperature + " degrees out. There is " + response.body.currently.precipProbability + "% chance of rain."
             })
         }
     })

@@ -4,13 +4,19 @@ const forecast = require("./utils/forcast")
 
 
 
-// geoCode('Barwani', (error, data) => {
-//     console.log('Error', error)
-//     console.log('Data', data)
-// })
+geoCode('Barwani', (error, data) => {
 
-forecast(22.03 , 74.9 , (error , data) => {
-    console.log('Error', error)
-    console.log('Data', data)
+    if(error){
+        return console.log(error)    
+    }
+
+    forecast(data.latitude, data.longitude, (error, forecastData) => {
+        if(error){
+            return console.log(error)
+        }
+        console.log(data.location)
+        console.log(forecastData.data)
+    })
 })
+
 
